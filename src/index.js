@@ -19,8 +19,11 @@ let possibleVariants = [];
 const randomInteger = (min, max) => {
     if ((min && max) && min < max) {
         const number = getRandomNumber(min, max);
-
-        if (toNumber(minMaxNumbers.max) !== possibleVariants.length) {
+        const difference = (max - min) + 1;
+            console.log(number)
+        console.log(possibleVariants)
+        // debugger
+        if (difference !== possibleVariants.length) {
             if (!possibleVariants.includes(number)) {
                 possibleVariants.push(number)
 
@@ -36,6 +39,8 @@ const randomInteger = (min, max) => {
     } else {
         minMaxNumbers.result = `Enter min and max parameters`
     }
+
+
 }
 
 btnGenerate.addEventListener('click', () => {
